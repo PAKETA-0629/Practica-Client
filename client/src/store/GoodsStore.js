@@ -4,6 +4,13 @@ export default class GoodsStore {
     constructor() {
         this._types = []
         this._goods = []
+        this._basket = [
+            {id: 1, name: "1", price:250, img: null},
+            {id: 2, name: "2", price:250, img: null},
+            {id: 3, name: "3", price:250, img: null},
+            {id: 4, name: "4", price:250, img: null},
+            {id: 5, name: "5", price:250, img: null},
+        ]
         this._selectedType = {}
         this._selectedBrand = {}
         this._page = 1
@@ -17,6 +24,9 @@ export default class GoodsStore {
     }
     setGoods(goods) {
         this._goods = goods
+    }
+    setBasket(items) {
+        this._basket = items
     }
     setSelectedType(type) {
         this.setPage(1)
@@ -34,6 +44,9 @@ export default class GoodsStore {
     }
     get goods() {
         return this._goods
+    }
+    get basket() {
+        return this._basket
     }
     get selectedType() {
         return this._selectedType

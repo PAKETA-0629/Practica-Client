@@ -28,7 +28,6 @@ const Shop = observer(() => {
             goods.setTotalCount(data.count)
         })
     }, [goods.selectedType.id, goods.page, 9])
-    
 
     return (
         <Container>
@@ -40,6 +39,7 @@ const Shop = observer(() => {
                 </Row>
                 <Row>
                     <Col>
+                        <Pages/>
                         <GoodsList/>
                         <Pages/>
                     </Col>

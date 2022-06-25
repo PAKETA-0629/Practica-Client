@@ -11,9 +11,9 @@ const TypeBar = observer(() => {
                 <ListGroup.Item 
                 style={{cursor:'pointer'}}
                 active={type.id === goods.selectedType.id}
-                onClick={() => goods.setSelectedType(type)}
+                onClick={() => type.id === goods.selectedType.id ? goods.setSelectedType(-1) : goods.setSelectedType(type)}
                 key={type.id}>
-                    {type.name}
+                    <h6 style={{margin:3, padding:0, userSelect:'none'}}>{type.name}</h6>
                 </ListGroup.Item>
             )}
         </ListGroup>

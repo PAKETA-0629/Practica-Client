@@ -11,8 +11,6 @@ const Admin = () => {
 
     const { user } = useContext(Context)
 
-    console.log(user.isAuth)
-
     return (
         <Container className="d-flex flex-column">
             <Button variant={"outline-dark"} className="mt-2" onClick={() => setTypeVisible(true)}>Додати категорію</Button>
