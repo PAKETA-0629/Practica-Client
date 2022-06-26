@@ -5,16 +5,12 @@ export default class GoodsStore {
         this._types = []
         this._goods = []
         this._basket = [
-            {id: 1, name: "1", price:250, img: null},
-            {id: 2, name: "2", price:250, img: null},
-            {id: 3, name: "3", price:250, img: null},
-            {id: 4, name: "4", price:250, img: null},
-            {id: 5, name: "5", price:250, img: null},
         ]
         this._selectedType = {}
         this._selectedBrand = {}
         this._page = 1
         this._totalCount = 0
+        this._basketCount = 0
         this._limit = 9
         makeAutoObservable(this)
     }

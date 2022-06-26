@@ -8,7 +8,8 @@ const BasketItem = ({goods, deleteItem}) => {
             <img style={{marginLeft:-12, marginRight:15, width:150, height:150, backgroundColor:'black'}} src={process.env.REACT_APP_API_URL + goods.img}/>     
             <div style={{width:500}}>
                 <h2>{goods.name}</h2>
-                <h5>{goods.price} ГРН</h5>
+                <h5>Кількість: {goods.qty}</h5>
+                <h5>{goods.price * goods.qty} ГРН</h5>
             </div>
             <CloseButton style={{marginTop:12, marginLeft:150}} onClick={() => deleteItem(goods.id)}/>
         </div>

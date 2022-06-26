@@ -30,13 +30,8 @@ const Shop = observer(() => {
     }, [goods.selectedType.id, goods.page, 9])
 
     return (
-        <Container>
-            <Row className="mt-3">
-                <Row>
-                    <Col>
-                        <TypeBar/>  
-                    </Col>
-                </Row>
+        <Container style={{backgroundColor:'black', marginTop:0}}>
+            <Row>
                 <Row>
                     <Col>
                         <Pages/>
