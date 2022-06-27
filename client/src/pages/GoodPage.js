@@ -47,14 +47,7 @@ const GoodPage = () => {
                         <hr/>
                         <h4>Опис:</h4>
                         <p style={{height:252}}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Morbi ut vestibulum quam. Integer mollis nisi sagittis tempor tempus. 
-                            Suspendisse euismod tincidunt ligula et dignissim. 
-                            Etiam semper, magna non placerat venenatis, neque arcu scelerisque ligula, nec eleifend nunc eros non justo. 
-                            Ut a eros nibh. Suspendisse malesuada ligula ullamcorper varius rutrum. 
-                            Nulla tincidunt libero vel auctor hendrerit. 
-                            Donec dui mauris, porttitor ut libero non, faucibus pulvinar urna. 
-                            Integer at feugiat ligula. Proin ornare sapien a nisl rhoncus gravida. 
+                            {cloth.description}
                         </p>
                         <hr/>
                         <h3>Ціна: {cloth.price} ГРН</h3>

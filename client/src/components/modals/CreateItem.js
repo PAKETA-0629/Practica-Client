@@ -29,6 +29,7 @@ const CreateItem = observer(({show, onHide}) => {
         formData.append('price', `${price}`)
         formData.append('img', file)
         formData.append('typeId', goods.selectedType.id)
+        formData.append('description', description)
         createItem(formData).then(data => onHide())
         goods.setSelectedType.id = null;
     }
