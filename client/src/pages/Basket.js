@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useContext } from "react";
-import { Row, Button, NavLink } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
 import { Context } from "..";
 import BasketItem from "../components/BasketItem";
-import { fetchItems } from "../http/goodsAPI";
 import { observer } from "mobx-react-lite";
-import { LOGIN_ROUTE } from "../utils/consts";
 
 const Basket = observer(() => {
     const {goods} = useContext(Context)
@@ -19,7 +17,7 @@ const Basket = observer(() => {
         <Row style={{marginTop:25}}>
             
             {goods.basket.map(basket => (
-                sum += basket.price * basket.qty,
+                sum += (basket.price * basket.qty),
                 key += 1,
                 <Row key={key} id={basket.id} style={{display:'flex', justifyContent:'center', marginTop:-45}}>
                     <BasketItem goods={basket} deleteItem={deleteItem}/>
