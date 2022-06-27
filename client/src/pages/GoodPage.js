@@ -36,11 +36,11 @@ const GoodPage = () => {
 
     return (
         <Container style={{height:'auto', backgroundColor:'black'}}>
-            <div style={{height:'100%', marginBottom:'24.1%', display:'inline-flex', backgroundColor:'black', color:'white'}}>
+            <div style={{height:'100%', width:1300, marginBottom:'24.1%', display:'inline-flex', backgroundColor:'black', color:'white'}}>
                 <div>
                     <img width={600} height={600} src={process.env.REACT_APP_API_URL + cloth.img}/>
                 </div>
-                <div style={{marginTop:-16, padding:0}}>
+                <div style={{marginTop:-16, padding:0, width:'100%'}}>
                     <div style={{paddingLeft:5}}>
                         <hr/>
                         <h2>{cloth.name}</h2>

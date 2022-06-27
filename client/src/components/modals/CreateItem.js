@@ -8,8 +8,16 @@ import { createItem } from "../../http/goodsAPI";
 const CreateItem = observer(({show, onHide}) => {
     const {goods} = useContext(Context)
     //const [itemVisible, setItemVisible] = useState(false)
+    
     const [name, setName] = useState('')
-    const [price, setPrice] = useState(0)
+
+    const min = 1
+    const [price, setPrice] = useState(min)
+    const handleChange = event => {
+        const value = Math.max(min, Number(event.target.value));
+        setPrice(value);
+      };
+
     const [file, setFile] = useState(null)
     const [description, setDescription] = useState('')
 
@@ -31,7 +39,13 @@ const CreateItem = observer(({show, onHide}) => {
         formData.append('typeId', goods.selectedType.id)
         formData.append('description', description)
         createItem(formData).then(data => onHide())
-        goods.setSelectedType.id = null;
+        
+        //reset data
+        goods.setSelectedType(-1);
+        setName('')
+        setPrice(0)
+        setFile(null)
+        setDescription('')
     }
 
     return (
@@ -69,7 +83,7 @@ const CreateItem = observer(({show, onHide}) => {
                         <Form.Control 
                             type="number" 
                             value={price} 
-                            onChange={e => setPrice(Number(e.target.value))}
+                            onChange={handleChange}
                         />
                         <Form.Label className="mt-3">Зображення товару</Form.Label>
                         <Form.Control 
@@ -87,7 +101,6 @@ const CreateItem = observer(({show, onHide}) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="outline-danger">Відмінити</Button>
                     <Button variant="outline-success" onClick={addItem}>Додати</Button>
                 </Modal.Footer>
             </Modal.Dialog>

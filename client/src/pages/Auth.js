@@ -40,32 +40,32 @@ const Auth = observer(() => {
         className="d-flex justify-content-center align-items-center"
         style={{height: window.innerHeight - 54}}>
             <Card style={{width: 680}} className="p-5">
-                <h2 className="m-auto">{isLogin ? 'Login Form' : 'Registration Form'}</h2>
+                <h2 className="m-auto">{isLogin ? 'Вхід в особистий кабінет' : 'Реєстрація'}</h2>
                 <Form className="d-flex flex-column">
                     <Form.Control
                     className="mt-4"
-                    placeholder="Login"
+                    placeholder="Пошта"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     />
                     <Form.Control
                     className="mt-3"
-                    placeholder="Password"
+                    placeholder="Пароль"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     type="password"
                     />
                     <Row className="d-flex justify-content-between mt-3 ms-0 me-0">
                         <Button variant={"outline-success"} onClick={click}>
-                            {isLogin ? 'Login' : 'Make an account'}
+                            {isLogin ? 'Вхід' : 'Зареєструватися'}
                         </Button>
                         {isLogin ?
                             <div>
-                                Don't have an account? <NavLink to={REGISTRATION_ROUTE}>Register</NavLink>
+                                Немає акаунту? <NavLink to={REGISTRATION_ROUTE}>Зареєструйтеся</NavLink>
                             </div>
                             :
                             <div>
-                                Have an account? <NavLink to={LOGIN_ROUTE}>Login</NavLink>
+                                Вже є створений акаунт? <NavLink to={LOGIN_ROUTE}>Увійдіть</NavLink>
                             </div>
                         
                         }

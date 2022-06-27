@@ -5,8 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE } from "../utils/consts";
-import { SHOP_ROUTE } from "../utils/consts";
+import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 import TypeBar from "./TypeBar";
 
@@ -41,8 +40,8 @@ const NavBar = observer(() => {
                     </Nav>
                     :
                     <Nav className="ms-auto" style={{color:'white'}}>
-                        <Button variant={"outline-light"} onClick={() => navigate(LOGIN_ROUTE)}>Логін</Button>
-                        <Button variant={"outline-light"} className="ms-2" onClick={() => navigate(LOGIN_ROUTE)}>Кошик</Button>
+                        <Button variant={"outline-light"} onClick={() => navigate(LOGIN_ROUTE)}>Кошик</Button>
+                        <Button variant={"outline-light"} className="ms-2" onClick={() => navigate(LOGIN_ROUTE)}>Логін</Button>
                     </Nav>
                 }
             </Container>

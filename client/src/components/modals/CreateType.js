@@ -26,7 +26,6 @@ const CreateType = ({show, onHide}) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="outline-danger">Відмінити</Button>
                     <Button variant="outline-success" onClick={addType}>Додати</Button>
                 </Modal.Footer>
             </Modal.Dialog>
